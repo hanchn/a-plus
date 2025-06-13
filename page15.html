@@ -1,261 +1,545 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>亚马逊A+内容排版模板</title>
-    <link rel="stylesheet" href="style/css15.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- 引入html2canvas库用于截图 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon A+ Content Layout Template</title>
+    <link rel="stylesheet" href="style/css15.css" />
+    <!-- Enhanced Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+Pro:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- html2canvas for screenshot functionality -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="a-plus-container">
-        <!-- 模块1: 标准全宽图 (970 × 600) -->
-        <div class="module standard-header" data-module="标准全宽图">
-            <div class="module-label">标准全宽图 (970 × 600px)</div>
-            <div class="download-btn" onclick="downloadModule(this)">📥 下载图片</div>
-            <div class="image-placeholder">
-                <img src="https://picsum.photos/970/600?random=1" alt="标准全宽图">
-                <div class="overlay-text">
-                    <h1>产品标题</h1>
-                    <p>吸引眼球的产品描述文字</p>
-                </div>
-            </div>
+      <!-- Module 1: Standard Full Width Image (970 × 600) -->
+      <div class="module standard-header" data-module="Standard-Header">
+        <div class="module-label">Standard Full Width (970 × 600px)</div>
+        <div class="download-btn" onclick="downloadModule(this)">
+          📥 Download
         </div>
+        <div class="image-placeholder">
+          <img src="https://picsum.photos/970/600?random=1" alt="Hero Banner" />
+          <div class="overlay-text">
+            <h1 class="hero-title">Premium Collection</h1>
+            <p class="hero-subtitle">
+              Discover our exclusive range of premium products designed for
+              excellence
+            </p>
+            <div class="hero-badge">NEW ARRIVAL</div>
+          </div>
+        </div>
+      </div>
 
-        <!-- 模块2: 标准四图 (220 × 220 each) -->
-        <div class="module four-image-text" data-module="标准四图">
-            <div class="module-label">标准四图 (每图 220 × 220px)</div>
-            <div class="download-btn" onclick="downloadModule(this)">📥 下载图片</div>
-            <div class="four-grid">
-                <div class="grid-item">
-                    <img src="https://picsum.photos/220/220?random=2" alt="特点1">
-                    <h3>特点标题1</h3>
-                    <p>详细描述产品特点和优势</p>
-                </div>
-                <div class="grid-item">
-                    <img src="https://picsum.photos/220/220?random=3" alt="特点2">
-                    <h3>特点标题2</h3>
-                    <p>详细描述产品特点和优势</p>
-                </div>
-                <div class="grid-item">
-                    <img src="https://picsum.photos/220/220?random=4" alt="特点3">
-                    <h3>特点标题3</h3>
-                    <p>详细描述产品特点和优势</p>
-                </div>
-                <div class="grid-item">
-                    <img src="https://picsum.photos/220/220?random=5" alt="特点4">
-                    <h3>特点标题4</h3>
-                    <p>详细描述产品特点和优势</p>
-                </div>
-            </div>
+      <!-- Module 2: Four Image Grid (220 × 220 each) -->
+      <div class="module four-image-text" data-module="Four-Image-Grid">
+        <div class="module-label">Four Image Grid (220 × 220px each)</div>
+        <div class="download-btn" onclick="downloadModule(this)">
+          📥 Download
         </div>
+        <div class="section-header">
+          <h2 class="section-title">Key Features</h2>
+          <p class="section-subtitle">What makes our products exceptional</p>
+        </div>
+        <div class="four-grid">
+          <div class="grid-item">
+            <div class="image-wrapper">
+              <img
+                src="https://picsum.photos/220/220?random=2"
+                alt="Premium Quality"
+              />
+              <div class="image-overlay">01</div>
+            </div>
+            <h3 class="feature-title">Premium Quality</h3>
+            <p class="feature-desc">
+              Crafted with the finest materials and attention to detail
+            </p>
+          </div>
+          <div class="grid-item">
+            <div class="image-wrapper">
+              <img
+                src="https://picsum.photos/220/220?random=3"
+                alt="Innovative Design"
+              />
+              <div class="image-overlay">02</div>
+            </div>
+            <h3 class="feature-title">Innovative Design</h3>
+            <p class="feature-desc">
+              Modern aesthetics meets functional excellence
+            </p>
+          </div>
+          <div class="grid-item">
+            <div class="image-wrapper">
+              <img
+                src="https://picsum.photos/220/220?random=4"
+                alt="Sustainable"
+              />
+              <div class="image-overlay">03</div>
+            </div>
+            <h3 class="feature-title">Eco-Friendly</h3>
+            <p class="feature-desc">
+              Sustainably sourced and environmentally conscious
+            </p>
+          </div>
+          <div class="grid-item">
+            <div class="image-wrapper">
+              <img
+                src="https://picsum.photos/220/220?random=5"
+                alt="Warranty"
+              />
+              <div class="image-overlay">04</div>
+            </div>
+            <h3 class="feature-title">Lifetime Warranty</h3>
+            <p class="feature-desc">
+              Comprehensive coverage for complete peace of mind
+            </p>
+          </div>
+        </div>
+      </div>
 
-        <!-- 模块3: 标准三图 (300 × 300 each) -->
-        <div class="module three-image-text" data-module="标准三图">
-            <div class="module-label">标准三图 (每图 300 × 300px)</div>
-            <div class="download-btn" onclick="downloadModule(this)">📥 下载图片</div>
-            <div class="three-grid">
-                <div class="grid-item">
-                    <img src="https://picsum.photos/300/300?random=6" alt="功能1">
-                    <h3>核心功能1</h3>
-                    <p>详细说明产品的核心功能和使用场景</p>
-                </div>
-                <div class="grid-item">
-                    <img src="https://picsum.photos/300/300?random=7" alt="功能2">
-                    <h3>核心功能2</h3>
-                    <p>详细说明产品的核心功能和使用场景</p>
-                </div>
-                <div class="grid-item">
-                    <img src="https://picsum.photos/300/300?random=8" alt="功能3">
-                    <h3>核心功能3</h3>
-                    <p>详细说明产品的核心功能和使用场景</p>
-                </div>
-            </div>
+      <!-- Module 3: Three Image Showcase (300 × 300 each) -->
+      <div class="module three-image-text" data-module="Three-Image-Showcase">
+        <div class="module-label">Three Image Showcase (300 × 300px each)</div>
+        <div class="download-btn" onclick="downloadModule(this)">
+          📥 Download
         </div>
+        <div class="section-header centered">
+          <h2 class="section-title elegant">Core Functions</h2>
+          <p class="section-subtitle">
+            Experience the perfect blend of form and function
+          </p>
+          <div class="decorative-line"></div>
+        </div>
+        <div class="three-grid">
+          <div class="grid-item">
+            <div class="image-frame">
+              <img
+                src="https://picsum.photos/300/300?random=6"
+                alt="Performance"
+              />
+              <div class="frame-corner top-left"></div>
+              <div class="frame-corner top-right"></div>
+              <div class="frame-corner bottom-left"></div>
+              <div class="frame-corner bottom-right"></div>
+            </div>
+            <h3 class="function-title">Superior Performance</h3>
+            <p class="function-desc">
+              Advanced technology delivering exceptional results in every use
+              case scenario
+            </p>
+          </div>
+          <div class="grid-item">
+            <div class="image-frame">
+              <img
+                src="https://picsum.photos/300/300?random=7"
+                alt="Versatility"
+              />
+              <div class="frame-corner top-left"></div>
+              <div class="frame-corner top-right"></div>
+              <div class="frame-corner bottom-left"></div>
+              <div class="frame-corner bottom-right"></div>
+            </div>
+            <h3 class="function-title">Ultimate Versatility</h3>
+            <p class="function-desc">
+              Adaptable design that seamlessly integrates into any environment
+              or workflow
+            </p>
+          </div>
+          <div class="grid-item">
+            <div class="image-frame">
+              <img
+                src="https://picsum.photos/300/300?random=8"
+                alt="Reliability"
+              />
+              <div class="frame-corner top-left"></div>
+              <div class="frame-corner top-right"></div>
+              <div class="frame-corner bottom-left"></div>
+              <div class="frame-corner bottom-right"></div>
+            </div>
+            <h3 class="function-title">Unmatched Reliability</h3>
+            <p class="function-desc">
+              Consistent performance you can depend on, backed by rigorous
+              testing standards
+            </p>
+          </div>
+        </div>
+      </div>
 
-        <!-- 模块4: 单图+文本叠加 (970 × 300) -->
-        <div class="module image-text-overlay" data-module="单图文本叠加">
-            <div class="module-label">单图+文本叠加 (970 × 300px)</div>
-            <div class="download-btn" onclick="downloadModule(this)">📥 下载图片</div>
-            <div class="overlay-container">
-                <img src="https://picsum.photos/970/300?random=9" alt="产品展示">
-                <div class="text-overlay">
-                    <h2>产品亮点</h2>
-                    <p>在这里添加产品的核心卖点和优势描述，文字会叠加在图片上方</p>
-                    <div class="highlight-points">
-                        <span class="point">✓ 优质材料</span>
-                        <span class="point">✓ 精工制作</span>
-                        <span class="point">✓ 品质保证</span>
-                    </div>
-                </div>
-            </div>
+      <!-- Module 4: Image with Text Overlay (970 × 300) -->
+      <div class="module image-text-overlay" data-module="Image-Text-Overlay">
+        <div class="module-label">Image + Text Overlay (970 × 300px)</div>
+        <div class="download-btn" onclick="downloadModule(this)">
+          📥 Download
         </div>
+        <div class="overlay-container">
+          <img
+            src="https://picsum.photos/970/300?random=9"
+            alt="Product Showcase"
+          />
+          <div class="text-overlay modern">
+            <div class="overlay-badge">FEATURED</div>
+            <h2 class="overlay-title">Product Highlights</h2>
+            <p class="overlay-desc">
+              Discover the exceptional features that set our products apart from
+              the competition
+            </p>
+            <div class="highlight-grid">
+              <div class="highlight-item">
+                <span class="highlight-icon">✓</span>
+                <span class="highlight-text">Premium Materials</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✓</span>
+                <span class="highlight-text">Expert Craftsmanship</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✓</span>
+                <span class="highlight-text">Quality Assurance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <!-- 模块5: 图片与旁文 (图300×300, 文670px宽) -->
-        <div class="module image-side-text" data-module="图片与旁文">
-            <div class="module-label">图片与旁文 (图300×300px, 文670px宽)</div>
-            <div class="download-btn" onclick="downloadModule(this)">📥 下载图片</div>
-            <div class="side-layout">
-                <div class="image-section">
-                    <img src="https://picsum.photos/300/300?random=10" alt="产品细节">
-                </div>
-                <div class="text-section">
-                    <h2>产品详细说明</h2>
-                    <p>这里可以详细介绍产品的材质、工艺、使用方法等信息。文字区域宽度为670px，可以容纳较多的产品描述内容。</p>
-                    <ul>
-                        <li>高品质材料制作</li>
-                        <li>精密工艺处理</li>
-                        <li>严格质量控制</li>
-                        <li>完善售后服务</li>
-                    </ul>
-                    <div class="specs">
-                        <div class="spec-item">
-                            <strong>尺寸：</strong>具体尺寸信息
-                        </div>
-                        <div class="spec-item">
-                            <strong>材质：</strong>材质说明
-                        </div>
-                        <div class="spec-item">
-                            <strong>重量：</strong>重量信息
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- Module 5: Image and Side Text (300×300 image, 670px text) -->
+      <div class="module image-side-text" data-module="Image-Side-Text">
+        <div class="module-label">
+          Image & Side Text (300×300px image, 670px text)
         </div>
+        <div class="download-btn" onclick="downloadModule(this)">
+          📥 Download
+        </div>
+        <div class="side-layout">
+          <div class="image-section">
+            <div class="image-container">
+              <img
+                src="https://picsum.photos/300/300?random=10"
+                alt="Product Details"
+              />
+              <div class="image-badge">PREMIUM</div>
+            </div>
+          </div>
+          <div class="text-section">
+            <div class="text-header">
+              <h2 class="detail-title">Detailed Product Information</h2>
+              <div class="title-underline"></div>
+            </div>
+            <p class="detail-intro">
+              Explore the comprehensive details of our premium product line,
+              designed with precision and crafted for excellence. Every aspect
+              has been carefully considered to deliver an unparalleled user
+              experience.
+            </p>
 
-        <!-- 品牌故事模块 -->
-        <div class="module brand-story" data-module="品牌故事">
-            <div class="module-label">品牌故事模块 (标题区1464×625px, 卡片362×453px)</div>
-            <div class="download-btn" onclick="downloadModule(this)">📥 下载图片</div>
-            <div class="brand-header">
-                <img src="https://picsum.photos/1464/625?random=11" alt="品牌背景">
-                <div class="brand-title">
-                    <h1>品牌故事</h1>
-                    <p>品牌理念和发展历程</p>
-                </div>
+            <div class="feature-list">
+              <div class="feature-item">
+                <div class="feature-bullet"></div>
+                <span>Premium grade materials sourced globally</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-bullet"></div>
+                <span>Precision engineering and manufacturing</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-bullet"></div>
+                <span>Rigorous quality control standards</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-bullet"></div>
+                <span>Comprehensive customer support</span>
+              </div>
             </div>
-            <div class="brand-cards">
-                <div class="brand-card">
-                    <img src="https://picsum.photos/362/453?random=12" alt="品牌历程1">
-                    <h3>创立初心</h3>
-                    <p>品牌创立的初心和理念</p>
-                </div>
-                <div class="brand-card">
-                    <img src="https://picsum.photos/362/453?random=13" alt="品牌历程2">
-                    <h3>发展历程</h3>
-                    <p>品牌的发展历程和里程碑</p>
-                </div>
-                <div class="brand-card">
-                    <img src="https://picsum.photos/362/453?random=14" alt="品牌历程3">
-                    <h3>未来愿景</h3>
-                    <p>品牌的未来发展愿景</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- 纯文本模块 -->
-        <div class="module text-only" data-module="纯文本">
-            <div class="module-label">纯文本模块</div>
-            <div class="download-btn" onclick="downloadModule(this)">📥 下载图片</div>
-            <div class="text-content">
-                <h2>品牌介绍</h2>
-                <p>这里是纯文本模块，适合放置品牌故事、产品详细说明、使用指南等文字内容。文字内容应该简洁明了，突出产品的核心价值和品牌理念。</p>
-                <p>可以分段落展示不同的信息点，让客户更好地了解产品和品牌。注意文字不要过多，保持简洁有力的表达。</p>
+            <div class="specs-grid">
+              <div class="spec-card">
+                <div class="spec-icon">📏</div>
+                <div class="spec-content">
+                  <strong>Dimensions:</strong>
+                  <span>Custom sizing available</span>
+                </div>
+              </div>
+              <div class="spec-card">
+                <div class="spec-icon">🏗️</div>
+                <div class="spec-content">
+                  <strong>Material:</strong>
+                  <span>Premium composite blend</span>
+                </div>
+              </div>
+              <div class="spec-card">
+                <div class="spec-icon">⚖️</div>
+                <div class="spec-content">
+                  <strong>Weight:</strong>
+                  <span>Optimized for portability</span>
+                </div>
+              </div>
+              <div class="spec-card">
+                <div class="spec-icon">🛡️</div>
+                <div class="spec-content">
+                  <strong>Warranty:</strong>
+                  <span>Lifetime coverage included</span>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- 尺寸参考指南 -->
-        <div class="size-guide">
-            <h2>A+内容尺寸参考指南</h2>
-            <div class="guide-grid">
-                <div class="guide-item">
-                    <strong>标准全宽图：</strong>970 × 600px
-                </div>
-                <div class="guide-item">
-                    <strong>标准四图：</strong>每图 220 × 220px
-                </div>
-                <div class="guide-item">
-                    <strong>标准三图：</strong>每图 300 × 300px
-                </div>
-                <div class="guide-item">
-                    <strong>单图+文本：</strong>970 × 300px
-                </div>
-                <div class="guide-item">
-                    <strong>图片与旁文：</strong>图300×300px, 文670px宽
-                </div>
-                <div class="guide-item">
-                    <strong>品牌故事标题：</strong>1464 × 625px
-                </div>
-                <div class="guide-item">
-                    <strong>品牌故事卡片：</strong>362 × 453px
-                </div>
-            </div>
+      <!-- Brand Story Module -->
+      <div class="module brand-story" data-module="Brand-Story">
+        <div class="module-label">
+          Brand Story (Header 1464×625px, Cards 362×453px)
         </div>
+        <div class="download-btn" onclick="downloadModule(this)">
+          📥 Download
+        </div>
+        <div class="brand-header">
+          <img
+            src="https://picsum.photos/1464/625?random=11"
+            alt="Brand Heritage"
+          />
+          <div class="brand-title">
+            <h1 class="brand-main-title">Our Story</h1>
+            <p class="brand-tagline">Crafting Excellence Since Day One</p>
+            <div class="brand-divider"></div>
+          </div>
+        </div>
+        <div class="brand-cards">
+          <div class="brand-card">
+            <div class="card-image-wrapper">
+              <img
+                src="https://picsum.photos/362/453?random=12"
+                alt="Foundation"
+              />
+              <div class="card-overlay">
+                <div class="card-year">2010</div>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Foundation</h3>
+              <p class="card-desc">
+                Born from a vision to create exceptional products that stand the
+                test of time
+              </p>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="card-image-wrapper">
+              <img
+                src="https://picsum.photos/362/453?random=13"
+                alt="Innovation"
+              />
+              <div class="card-overlay">
+                <div class="card-year">2015</div>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Innovation</h3>
+              <p class="card-desc">
+                Breakthrough technologies and design innovations that
+                revolutionized the industry
+              </p>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="card-image-wrapper">
+              <img src="https://picsum.photos/362/453?random=14" alt="Future" />
+              <div class="card-overlay">
+                <div class="card-year">2024</div>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Future Vision</h3>
+              <p class="card-desc">
+                Continuing our legacy of excellence while pioneering sustainable
+                solutions
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Only Module -->
+      <div class="module text-only" data-module="Text-Only">
+        <div class="module-label">Text Only Module</div>
+        <div class="download-btn" onclick="downloadModule(this)">
+          📥 Download
+        </div>
+        <div class="text-content">
+          <div class="text-header-section">
+            <h2 class="brand-intro-title">About Our Brand</h2>
+            <div class="decorative-elements">
+              <div class="deco-line left"></div>
+              <div class="deco-diamond"></div>
+              <div class="deco-line right"></div>
+            </div>
+          </div>
+
+          <div class="text-columns">
+            <div class="text-column">
+              <p class="intro-text">
+                We are dedicated to creating exceptional products that
+                seamlessly blend innovative design with uncompromising quality.
+                Our commitment to excellence drives every decision we make, from
+                material selection to final production.
+              </p>
+            </div>
+            <div class="text-column">
+              <p class="intro-text">
+                Through continuous innovation and customer-focused development,
+                we strive to exceed expectations and deliver solutions that
+                enhance everyday experiences. Quality isn't just our
+                standard—it's our promise.
+              </p>
+            </div>
+          </div>
+
+          <div class="brand-values">
+            <div class="value-item">
+              <div class="value-number">01</div>
+              <div class="value-content">
+                <h4>Quality First</h4>
+                <p>Uncompromising standards in every product</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-number">02</div>
+              <div class="value-content">
+                <h4>Innovation</h4>
+                <p>Pioneering solutions for tomorrow's challenges</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-number">03</div>
+              <div class="value-content">
+                <h4>Sustainability</h4>
+                <p>Responsible practices for a better future</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Size Reference Guide -->
+      <div class="size-guide">
+        <div class="guide-header">
+          <h2 class="guide-title">A+ Content Size Reference Guide</h2>
+          <p class="guide-subtitle">
+            Standard dimensions for Amazon A+ content modules
+          </p>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-item">
+            <div class="guide-icon">📐</div>
+            <div class="guide-text">
+              <strong>Standard Full Width:</strong> 970 × 600px
+            </div>
+          </div>
+          <div class="guide-item">
+            <div class="guide-icon">🖼️</div>
+            <div class="guide-text">
+              <strong>Four Image Grid:</strong> 220 × 220px each
+            </div>
+          </div>
+          <div class="guide-item">
+            <div class="guide-icon">🎨</div>
+            <div class="guide-text">
+              <strong>Three Image Showcase:</strong> 300 × 300px each
+            </div>
+          </div>
+          <div class="guide-item">
+            <div class="guide-icon">📝</div>
+            <div class="guide-text">
+              <strong>Image + Text Overlay:</strong> 970 × 300px
+            </div>
+          </div>
+          <div class="guide-item">
+            <div class="guide-icon">📄</div>
+            <div class="guide-text">
+              <strong>Image & Side Text:</strong> 300×300px image, 670px text
+            </div>
+          </div>
+          <div class="guide-item">
+            <div class="guide-icon">🏢</div>
+            <div class="guide-text">
+              <strong>Brand Story Header:</strong> 1464 × 625px
+            </div>
+          </div>
+          <div class="guide-item">
+            <div class="guide-icon">🃏</div>
+            <div class="guide-text">
+              <strong>Brand Story Cards:</strong> 362 × 453px each
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
-        // 下载模块为图片的函数
-        function downloadModule(button) {
-            const module = button.closest('.module');
-            const moduleName = module.getAttribute('data-module') || '模块';
-            
-            // 临时隐藏下载按钮和标签
-            const downloadBtn = module.querySelector('.download-btn');
-            const moduleLabel = module.querySelector('.module-label');
-            
-            downloadBtn.style.display = 'none';
-            moduleLabel.style.display = 'none';
-            
-            // 使用html2canvas截图
-            html2canvas(module, {
-                backgroundColor: '#ffffff',
-                scale: 2, // 提高图片质量
-                useCORS: true,
-                allowTaint: true,
-                width: 970,
-                height: module.offsetHeight
-            }).then(canvas => {
-                // 创建下载链接
-                const link = document.createElement('a');
-                link.download = `${moduleName}_${new Date().getTime()}.png`;
-                link.href = canvas.toDataURL('image/png');
-                
-                // 触发下载
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                
-                // 恢复按钮和标签显示
-                downloadBtn.style.display = 'block';
-                moduleLabel.style.display = 'block';
-            }).catch(error => {
-                console.error('下载失败:', error);
-                alert('下载失败，请重试');
-                
-                // 恢复按钮和标签显示
-                downloadBtn.style.display = 'block';
-                moduleLabel.style.display = 'block';
-            });
-        }
+      // Download module as image function
+      function downloadModule(button) {
+        const module = button.closest(".module");
+        const moduleName = module.getAttribute("data-module") || "Module";
 
-        // 为所有模块添加鼠标悬停效果
-        document.addEventListener('DOMContentLoaded', function() {
-            const modules = document.querySelectorAll('.module');
-            
-            modules.forEach(module => {
-                module.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px)';
-                    this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.15)';
-                });
-                
-                module.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
-                });
-            });
+        // Temporarily hide download button and label
+        const downloadBtn = module.querySelector(".download-btn");
+        const moduleLabel = module.querySelector(".module-label");
+
+        downloadBtn.style.display = "none";
+        moduleLabel.style.display = "none";
+
+        // Use html2canvas for screenshot
+        html2canvas(module, {
+          backgroundColor: "#ffffff",
+          scale: 2, // Higher quality
+          useCORS: true,
+          allowTaint: true,
+          width: 970,
+          height: module.offsetHeight,
+        })
+          .then((canvas) => {
+            // Create download link
+            const link = document.createElement("a");
+            link.download = `${moduleName}_${new Date().getTime()}.png`;
+            link.href = canvas.toDataURL("image/png");
+
+            // Trigger download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            // Restore button and label visibility
+            downloadBtn.style.display = "block";
+            moduleLabel.style.display = "block";
+          })
+          .catch((error) => {
+            console.error("Download failed:", error);
+            alert("Download failed, please try again");
+
+            // Restore button and label visibility
+            downloadBtn.style.display = "block";
+            moduleLabel.style.display = "block";
+          });
+      }
+
+      // Add hover effects to all modules
+      document.addEventListener("DOMContentLoaded", function () {
+        const modules = document.querySelectorAll(".module");
+
+        modules.forEach((module) => {
+          module.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-5px)";
+            this.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
+          });
+
+          module.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0)";
+            this.style.boxShadow = "0 5px 15px rgba(0,0,0,0.1)";
+          });
         });
+      });
     </script>
-</body>
+  </body>
 </html>
