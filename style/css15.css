@@ -1,0 +1,617 @@
+/* 亚马逊A+内容排版模板样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f0f2f5;
+  padding: 20px 0;
+}
+
+.a-plus-container {
+  max-width: 970px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.module {
+  width: 970px;
+  margin-bottom: 30px; /* 增加模块间距 */
+  position: relative;
+  background: white;
+  overflow: hidden;
+  border-radius: 12px; /* 圆角边框 */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  border: 2px solid #e1e8ed; /* 边框 */
+  transition: all 0.3s ease; /* 平滑过渡效果 */
+}
+
+.module:hover {
+  border-color: #3498db; /* 悬停时边框颜色 */
+}
+
+.module-label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 15px;
+  font-size: 13px;
+  border-radius: 20px;
+  z-index: 10;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.module:hover .module-label {
+  transform: scale(1.05);
+}
+
+/* 下载按钮样式 */
+.download-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  padding: 8px 15px;
+  font-size: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 10;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.module:hover .download-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.download-btn:hover {
+  background: linear-gradient(135deg, #ee5a24 0%, #ff6b6b 100%);
+  transform: scale(1.05);
+}
+
+.download-btn:active {
+  transform: scale(0.95);
+}
+
+/* 标准全宽图模块 (970 × 600) */
+.standard-header {
+  height: 600px;
+  position: relative;
+}
+
+.standard-header .image-placeholder {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.standard-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.overlay-text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.overlay-text p {
+  font-size: 18px;
+  max-width: 400px;
+}
+
+/* 标准四图模块 */
+.four-image-text {
+  padding: 40px 20px;
+  min-height: 400px;
+}
+
+.four-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.four-grid .grid-item {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.four-grid .grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.four-grid img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.four-grid img:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.four-grid h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.four-grid p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* 标准三图模块 */
+.three-image-text {
+  padding: 40px 20px;
+  min-height: 450px;
+}
+
+.three-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  margin-top: 20px;
+}
+
+.three-grid .grid-item {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.three-grid .grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.three-grid img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.three-grid img:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.three-grid h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+
+.three-grid p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 单图+文本叠加模块 */
+.image-text-overlay {
+  height: 300px;
+  position: relative;
+}
+
+.overlay-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.overlay-container img {
+  width: 970px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.text-overlay h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.text-overlay p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.highlight-points {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.point {
+  font-size: 14px;
+  color: #27ae60;
+  font-weight: 500;
+}
+
+/* 图片与旁文模块 */
+.image-side-text {
+  padding: 40px 20px;
+  min-height: 400px;
+}
+
+.side-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.image-section {
+  flex-shrink: 0;
+}
+
+.image-section img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.image-section img:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+}
+
+.text-section {
+  width: 670px;
+  flex: 1;
+}
+
+.text-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.text-section p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.text-section ul {
+  margin-bottom: 25px;
+  padding-left: 20px;
+}
+
+.text-section li {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.spec-item {
+  font-size: 14px;
+  color: #555;
+  padding: 12px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  transition: all 0.3s ease;
+}
+
+.spec-item:hover {
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  transform: translateX(5px);
+}
+
+/* 品牌故事模块 */
+.brand-story {
+  padding: 0;
+  min-height: 600px;
+}
+
+.brand-header {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.brand-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(0.66);
+  transform-origin: center;
+}
+
+.brand-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.brand-title h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.brand-title p {
+  font-size: 18px;
+}
+
+.brand-cards {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.brand-card {
+  flex: 1;
+  text-align: center;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px);
+}
+
+.brand-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transform: scale(0.83);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.brand-card img:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.brand-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.brand-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 纯文本模块 */
+.text-only {
+  padding: 50px 40px;
+  min-height: 300px;
+}
+
+.text-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.text-content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* 尺寸参考指南 */
+.size-guide {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 30px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.size-guide h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.guide-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.guide-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.guide-item strong {
+  color: #fff;
+}
+
+/* 响应式设计 */
+@media (max-width: 970px) {
+  .a-plus-container,
+  .module {
+    width: 100%;
+    max-width: 970px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .four-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .three-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .side-layout {
+    flex-direction: column;
+  }
+
+  .text-section {
+    width: 100%;
+  }
+
+  .brand-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .module-label,
+  .download-btn {
+    display: none !important;
+  }
+
+  .size-guide {
+    display: none;
+  }
+
+  .module {
+    page-break-inside: avoid;
+    margin-bottom: 10px;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  body {
+    background: white;
+  }
+}
+
+/* 加载动画 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.module {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.module:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.module:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.module:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.module:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.module:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.module:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.module:nth-child(7) {
+  animation-delay: 0.7s;
+}

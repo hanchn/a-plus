@@ -779,7 +779,6 @@ body {
   overflow: hidden;
 }
 
-/* 调整内容以适应新的尺寸 */
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;

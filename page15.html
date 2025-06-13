@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亚马逊A+内容排版模板</title>
+    <link rel="stylesheet" href="style/css15.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- 引入html2canvas库用于截图 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="a-plus-container">
+        <!-- 模块1: 标准全宽图 (970 × 600) -->
+        <div class="module standard-header" data-module="标准全宽图">
+            <div class="module-label">标准全宽图 (970 × 600px)</div>
+            <div class="download-btn" onclick="downloadModule(this)">📥 下载图片</div>
+            <div class="image-placeholder">
+                <img src="https://picsum.photos/970/600?random=1" alt="标准全宽图">
+                <div class="overlay-text">
+                    <h1>产品标题</h1>
+                    <p>吸引眼球的产品描述文字</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 模块2: 标准四图 (220 × 220 each) -->
+        <div class="module four-image-text" data-module="标准四图">
+            <div class="module-label">标准四图 (每图 220 × 220px)</div>
+            <div class="download-btn" onclick="downloadModule(this)">📥 下载图片</div>
+            <div class="four-grid">
+                <div class="grid-item">
+                    <img src="https://picsum.photos/220/220?random=2" alt="特点1">
+                    <h3>特点标题1</h3>
+                    <p>详细描述产品特点和优势</p>
+                </div>
+                <div class="grid-item">
+                    <img src="https://picsum.photos/220/220?random=3" alt="特点2">
+                    <h3>特点标题2</h3>
+                    <p>详细描述产品特点和优势</p>
+                </div>
+                <div class="grid-item">
+                    <img src="https://picsum.photos/220/220?random=4" alt="特点3">
+                    <h3>特点标题3</h3>
+                    <p>详细描述产品特点和优势</p>
+                </div>
+                <div class="grid-item">
+                    <img src="https://picsum.photos/220/220?random=5" alt="特点4">
+                    <h3>特点标题4</h3>
+                    <p>详细描述产品特点和优势</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 模块3: 标准三图 (300 × 300 each) -->
+        <div class="module three-image-text" data-module="标准三图">
+            <div class="module-label">标准三图 (每图 300 × 300px)</div>
+            <div class="download-btn" onclick="downloadModule(this)">📥 下载图片</div>
+            <div class="three-grid">
+                <div class="grid-item">
+                    <img src="https://picsum.photos/300/300?random=6" alt="功能1">
+                    <h3>核心功能1</h3>
+                    <p>详细说明产品的核心功能和使用场景</p>
+                </div>
+                <div class="grid-item">
+                    <img src="https://picsum.photos/300/300?random=7" alt="功能2">
+                    <h3>核心功能2</h3>
+                    <p>详细说明产品的核心功能和使用场景</p>
+                </div>
+                <div class="grid-item">
+                    <img src="https://picsum.photos/300/300?random=8" alt="功能3">
+                    <h3>核心功能3</h3>
+                    <p>详细说明产品的核心功能和使用场景</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 模块4: 单图+文本叠加 (970 × 300) -->
+        <div class="module image-text-overlay" data-module="单图文本叠加">
+            <div class="module-label">单图+文本叠加 (970 × 300px)</div>
+            <div class="download-btn" onclick="downloadModule(this)">📥 下载图片</div>
+            <div class="overlay-container">
+                <img src="https://picsum.photos/970/300?random=9" alt="产品展示">
+                <div class="text-overlay">
+                    <h2>产品亮点</h2>
+                    <p>在这里添加产品的核心卖点和优势描述，文字会叠加在图片上方</p>
+                    <div class="highlight-points">
+                        <span class="point">✓ 优质材料</span>
+                        <span class="point">✓ 精工制作</span>
+                        <span class="point">✓ 品质保证</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 模块5: 图片与旁文 (图300×300, 文670px宽) -->
+        <div class="module image-side-text" data-module="图片与旁文">
+            <div class="module-label">图片与旁文 (图300×300px, 文670px宽)</div>
+            <div class="download-btn" onclick="downloadModule(this)">📥 下载图片</div>
+            <div class="side-layout">
+                <div class="image-section">
+                    <img src="https://picsum.photos/300/300?random=10" alt="产品细节">
+                </div>
+                <div class="text-section">
+                    <h2>产品详细说明</h2>
+                    <p>这里可以详细介绍产品的材质、工艺、使用方法等信息。文字区域宽度为670px，可以容纳较多的产品描述内容。</p>
+                    <ul>
+                        <li>高品质材料制作</li>
+                        <li>精密工艺处理</li>
+                        <li>严格质量控制</li>
+                        <li>完善售后服务</li>
+                    </ul>
+                    <div class="specs">
+                        <div class="spec-item">
+                            <strong>尺寸：</strong>具体尺寸信息
+                        </div>
+                        <div class="spec-item">
+                            <strong>材质：</strong>材质说明
+                        </div>
+                        <div class="spec-item">
+                            <strong>重量：</strong>重量信息
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 品牌故事模块 -->
+        <div class="module brand-story" data-module="品牌故事">
+            <div class="module-label">品牌故事模块 (标题区1464×625px, 卡片362×453px)</div>
+            <div class="download-btn" onclick="downloadModule(this)">📥 下载图片</div>
+            <div class="brand-header">
+                <img src="https://picsum.photos/1464/625?random=11" alt="品牌背景">
+                <div class="brand-title">
+                    <h1>品牌故事</h1>
+                    <p>品牌理念和发展历程</p>
+                </div>
+            </div>
+            <div class="brand-cards">
+                <div class="brand-card">
+                    <img src="https://picsum.photos/362/453?random=12" alt="品牌历程1">
+                    <h3>创立初心</h3>
+                    <p>品牌创立的初心和理念</p>
+                </div>
+                <div class="brand-card">
+                    <img src="https://picsum.photos/362/453?random=13" alt="品牌历程2">
+                    <h3>发展历程</h3>
+                    <p>品牌的发展历程和里程碑</p>
+                </div>
+                <div class="brand-card">
+                    <img src="https://picsum.photos/362/453?random=14" alt="品牌历程3">
+                    <h3>未来愿景</h3>
+                    <p>品牌的未来发展愿景</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 纯文本模块 -->
+        <div class="module text-only" data-module="纯文本">
+            <div class="module-label">纯文本模块</div>
+            <div class="download-btn" onclick="downloadModule(this)">📥 下载图片</div>
+            <div class="text-content">
+                <h2>品牌介绍</h2>
+                <p>这里是纯文本模块，适合放置品牌故事、产品详细说明、使用指南等文字内容。文字内容应该简洁明了，突出产品的核心价值和品牌理念。</p>
+                <p>可以分段落展示不同的信息点，让客户更好地了解产品和品牌。注意文字不要过多，保持简洁有力的表达。</p>
+            </div>
+        </div>
+
+        <!-- 尺寸参考指南 -->
+        <div class="size-guide">
+            <h2>A+内容尺寸参考指南</h2>
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <strong>标准全宽图：</strong>970 × 600px
+                </div>
+                <div class="guide-item">
+                    <strong>标准四图：</strong>每图 220 × 220px
+                </div>
+                <div class="guide-item">
+                    <strong>标准三图：</strong>每图 300 × 300px
+                </div>
+                <div class="guide-item">
+                    <strong>单图+文本：</strong>970 × 300px
+                </div>
+                <div class="guide-item">
+                    <strong>图片与旁文：</strong>图300×300px, 文670px宽
+                </div>
+                <div class="guide-item">
+                    <strong>品牌故事标题：</strong>1464 × 625px
+                </div>
+                <div class="guide-item">
+                    <strong>品牌故事卡片：</strong>362 × 453px
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 下载模块为图片的函数
+        function downloadModule(button) {
+            const module = button.closest('.module');
+            const moduleName = module.getAttribute('data-module') || '模块';
+            
+            // 临时隐藏下载按钮和标签
+            const downloadBtn = module.querySelector('.download-btn');
+            const moduleLabel = module.querySelector('.module-label');
+            
+            downloadBtn.style.display = 'none';
+            moduleLabel.style.display = 'none';
+            
+            // 使用html2canvas截图
+            html2canvas(module, {
+                backgroundColor: '#ffffff',
+                scale: 2, // 提高图片质量
+                useCORS: true,
+                allowTaint: true,
+                width: 970,
+                height: module.offsetHeight
+            }).then(canvas => {
+                // 创建下载链接
+                const link = document.createElement('a');
+                link.download = `${moduleName}_${new Date().getTime()}.png`;
+                link.href = canvas.toDataURL('image/png');
+                
+                // 触发下载
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                // 恢复按钮和标签显示
+                downloadBtn.style.display = 'block';
+                moduleLabel.style.display = 'block';
+            }).catch(error => {
+                console.error('下载失败:', error);
+                alert('下载失败，请重试');
+                
+                // 恢复按钮和标签显示
+                downloadBtn.style.display = 'block';
+                moduleLabel.style.display = 'block';
+            });
+        }
+
+        // 为所有模块添加鼠标悬停效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const modules = document.querySelectorAll('.module');
+            
+            modules.forEach(module => {
+                module.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.15)';
+                });
+                
+                module.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
