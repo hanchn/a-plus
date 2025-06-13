@@ -19,6 +19,9 @@ body {
   max-width: 970px;
   margin: 0 auto;
   background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .module {
@@ -32,6 +35,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
+  box-sizing: border-box;
 }
 
 .module:hover {
@@ -1131,45 +1135,53 @@ body {
 
 /* Product Comparison Module */
 .product-comparison {
-  padding: 60px 40px;
+  padding: 40px 30px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .comparison-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .comparison-title {
   font-family: "Playfair Display", serif;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: white;
 }
 
 .comparison-subtitle {
-  font-size: 18px;
+  font-size: 16px;
   opacity: 0.9;
 }
 
 .comparison-grid {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  gap: 40px;
+  gap: 30px;
   align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .product-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 30px;
+  border-radius: 15px;
+  padding: 20px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease;
+  max-height: 400px;
+  overflow: hidden;
 }
 
 .product-card:hover {
@@ -1194,24 +1206,24 @@ body {
 
 .product-card img {
   width: 100%;
-  max-width: 300px;
-  height: 200px;
+  max-width: 250px;
+  height: 150px;
   object-fit: cover;
-  border-radius: 15px;
-  margin-bottom: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .product-name {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .product-price {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   color: #ffd700;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .vs-divider {
@@ -1221,25 +1233,26 @@ body {
 }
 
 .vs-circle {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
-  border: 3px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .feature-list {
   list-style: none;
   text-align: left;
+  font-size: 14px;
 }
 
 .feature-list li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
 }
@@ -1252,33 +1265,38 @@ body {
 
 /* Timeline Module */
 .timeline-module {
-  padding: 60px 40px;
+  padding: 40px 30px;
   background: white;
   height: 600px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .timeline-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .timeline-title {
   font-family: "Playfair Display", serif;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 700;
   color: #2c3e50;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .timeline-subtitle {
-  font-size: 18px;
+  font-size: 16px;
   color: #7f8c8d;
 }
 
 .timeline {
   position: relative;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
+  flex: 1;
+  overflow: hidden;
 }
 
 .timeline::before {
@@ -1294,7 +1312,7 @@ body {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
 }
@@ -1327,11 +1345,12 @@ body {
 
 .timeline-content {
   background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  width: 45%;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  width: 40%;
   border: 1px solid #e1e8ed;
+  font-size: 14px;
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
@@ -1352,54 +1371,61 @@ body {
 }
 
 .timeline-event {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   color: #2c3e50;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .timeline-desc {
   color: #7f8c8d;
-  line-height: 1.6;
+  line-height: 1.4;
+  font-size: 13px;
 }
 
 /* Statistics Module */
 .statistics-module {
-  padding: 60px 40px;
+  padding: 40px 30px;
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
   color: white;
   height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .stats-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .stats-title {
   font-family: "Playfair Display", serif;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 700;
   color: white;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .stats-subtitle {
-  font-size: 18px;
+  font-size: 16px;
   opacity: 0.9;
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .stat-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 30px 20px;
+  border-radius: 15px;
+  padding: 20px 15px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease;
@@ -1410,21 +1436,21 @@ body {
 }
 
 .stat-icon {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-
-.stat-number {
-  font-size: 36px;
-  font-weight: 700;
-  color: #ffd700;
+  font-size: 32px;
   margin-bottom: 10px;
 }
 
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffd700;
+  margin-bottom: 8px;
+}
+
 .stat-label {
-  font-size: 16px;
+  font-size: 14px;
   opacity: 0.9;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .stat-bar {
@@ -1444,42 +1470,50 @@ body {
 
 /* Customer Reviews Module */
 .reviews-module {
-  padding: 60px 40px;
+  padding: 40px 30px;
   background: #f8f9fa;
   height: 600px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .reviews-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .reviews-title {
   font-family: "Playfair Display", serif;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 700;
   color: #2c3e50;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .reviews-subtitle {
-  font-size: 18px;
+  font-size: 16px;
   color: #7f8c8d;
 }
 
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 20px;
+  flex: 1;
+  align-content: start;
 }
 
 .review-card {
   background: white;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   border: 1px solid #e1e8ed;
   transition: transform 0.3s ease;
+  height: fit-content;
+  max-height: 280px;
+  overflow: hidden;
 }
 
 .review-card:hover {
@@ -1488,15 +1522,20 @@ body {
 }
 
 .review-stars {
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .review-text {
   font-style: italic;
-  line-height: 1.6;
+  line-height: 1.4;
   color: #2c3e50;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .reviewer-info {
@@ -1505,66 +1544,72 @@ body {
 }
 
 .reviewer-avatar {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .reviewer-name {
   font-weight: 600;
   color: #2c3e50;
+  font-size: 14px;
 }
 
 .reviewer-title {
-  font-size: 14px;
+  font-size: 12px;
   color: #7f8c8d;
 }
 
 /* FAQ Module */
 .faq-module {
-  padding: 60px 40px;
+  padding: 40px 30px;
   background: white;
   height: 600px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .faq-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .faq-title {
   font-family: "Playfair Display", serif;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 700;
   color: #2c3e50;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .faq-subtitle {
-  font-size: 18px;
+  font-size: 16px;
   color: #7f8c8d;
 }
 
 .faq-list {
   max-width: 800px;
   margin: 0 auto;
+  flex: 1;
+  overflow: hidden;
 }
 
 .faq-item {
   border-bottom: 1px solid #e1e8ed;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .faq-question {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 15px 0;
   cursor: pointer;
   font-weight: 600;
   color: #2c3e50;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .faq-icon {
@@ -1574,16 +1619,20 @@ body {
 }
 
 .faq-answer {
-  padding: 0 0 20px 0;
+  padding: 0 0 15px 0;
   color: #7f8c8d;
-  line-height: 1.6;
+  line-height: 1.5;
+  font-size: 14px;
 }
 
 /* Video Module */
 .video-module {
-  padding: 40px;
+  padding: 30px;
   background: #1a1a1a;
   height: 600px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .video-container {
@@ -1595,9 +1644,10 @@ body {
 .video-thumbnail {
   position: relative;
   flex: 1;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  max-height: 400px;
 }
 
 .video-thumbnail img {
@@ -1611,8 +1661,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   display: flex;
@@ -1628,34 +1678,35 @@ body {
 }
 
 .play-icon {
-  font-size: 24px;
+  font-size: 20px;
   color: #333;
-  margin-left: 3px;
+  margin-left: 2px;
 }
 
 .video-overlay {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
+  bottom: 20px;
+  left: 20px;
   color: white;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .video-title {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .video-desc {
-  font-size: 16px;
+  font-size: 14px;
   opacity: 0.9;
 }
 
 .video-info {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 20px;
+  border-radius: 10px;
+  padding: 15px;
+  height: fit-content;
 }
 
 .video-stats {
@@ -1669,13 +1720,13 @@ body {
 }
 
 .video-stats .stat-number {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   color: #ffd700;
   display: block;
 }
 
 .video-stats .stat-label {
-  font-size: 14px;
+  font-size: 12px;
   opacity: 0.8;
 }
