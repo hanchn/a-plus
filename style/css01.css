@@ -33,10 +33,12 @@ body {
 .hero {
   background: linear-gradient(
       135deg,
-      rgba(255, 94, 77, 0.9) 0%,
-      rgba(255, 154, 0, 0.8) 50%,
-      rgba(255, 206, 84, 0.9) 100%
+      rgba(255, 94, 77, 0.3) 0%,
+      rgba(255, 154, 0, 0.2) 50%,
+      rgba(255, 206, 84, 0.3) 100%
     ),
+    url("../images/微信图片_20250613230818_35.png") right bottom/400px 500px
+      no-repeat,
     url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")
       center/cover;
   display: flex;
@@ -72,7 +74,7 @@ body {
   text-align: center;
   z-index: 3;
   position: relative;
-  max-width: 600px;
+  /* max-width: 600px; */
   padding: 0 40px;
 }
 
@@ -90,11 +92,12 @@ body {
   border-radius: 50px;
   margin-bottom: 30px;
   animation: fadeInUp 1s ease-out 0.2s both;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero-title {
   font-family: "Playfair Display", serif;
-  font-size: 84px;
+  font-size: 80px;
   font-weight: 900;
   color: #fff;
   text-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -102,6 +105,7 @@ body {
   letter-spacing: -3px;
   line-height: 0.85;
   animation: fadeInUp 1s ease-out 0.4s both;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero-subtitle {
@@ -113,6 +117,7 @@ body {
   letter-spacing: 1px;
   text-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   animation: fadeInUp 1s ease-out 0.6s both;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero-cta {
@@ -131,6 +136,7 @@ body {
   position: relative;
   overflow: hidden;
   animation: fadeInUp 1s ease-out 0.8s both;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero-cta::before {
@@ -163,7 +169,7 @@ body {
 
 /* Module 2: Features */
 .features {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+  background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 50%, #fdba74 100%);
   padding: 60px 50px;
   display: flex;
   flex-direction: column;
@@ -251,8 +257,8 @@ body {
 }
 
 .feature-icon {
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
   margin: 0 auto 25px;
   border-radius: 50%;
   background-size: cover;
@@ -264,15 +270,18 @@ body {
 }
 
 .feature:nth-child(1) .feature-icon {
-  background-image: url("https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80");
+  background: url("../images/84225d9029aab98a2e199ef84ffea961.jpg") left
+    top/contain no-repeat;
 }
 
 .feature:nth-child(2) .feature-icon {
-  background-image: url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80");
+  background: url("../images/微信图片_20250613233124_41.jpg") -20px -30px/140%
+    no-repeat;
 }
 
 .feature:nth-child(3) .feature-icon {
-  background-image: url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80");
+  background: url("../images/微信图片_20250613233333_42.png") -6px -1px / 110%
+    no-repeat;
 }
 
 .feature-icon::after {
@@ -323,7 +332,14 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(135, 206, 235, 0.4)
+    ),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")
+      center/cover;
+  filter: blur(1px);
+  opacity: 0.8;
 }
 
 .showcase-left {
@@ -367,6 +383,7 @@ body {
   line-height: 1.7;
   margin-bottom: 35px;
   max-width: 350px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .price-container {
@@ -443,7 +460,8 @@ body {
 }
 
 .product-item:nth-child(1) {
-  background-image: url("https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80");
+  background: url("../images/abc061549d0267f2277cb65a738eeca7.jpg") -38px center/
+    cover no-repeat;
 }
 
 .product-item:nth-child(2) {
@@ -451,11 +469,13 @@ body {
 }
 
 .product-item:nth-child(3) {
-  background-image: url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80");
+  background: url("../images/微信图片_20250613234919_46.jpg") center center/
+    cover no-repeat;
 }
 
 .product-item:nth-child(4) {
-  background-image: url("https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80");
+  background: url("../images/微信图片_20250614000340_47.jpg") left center/ cover
+    no-repeat;
 }
 
 .product-overlay {
