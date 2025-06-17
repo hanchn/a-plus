@@ -9,16 +9,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style/css01.css" />
-    <!-- html2canvas for screenshot functionality -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   </head>
   <body>
     <div class="container">
       <!-- Module 1: Hero Section -->
-      <section class="module hero" data-module="Hero-Section">
-        <div class="download-btn" onclick="downloadModule(this)">
-          📥 导出图片
-        </div>
+      <section class="module hero">
         <div class="hero-content">
           <div class="hero-badge">Premium Collection 2025</div>
           <h1 class="hero-title">Elegant Straw Sun Hat</h1>
@@ -30,10 +25,7 @@
       </section>
 
       <!-- Module 2: Premium Features -->
-      <section class="module features" data-module="Premium-Features">
-        <div class="download-btn" onclick="downloadModule(this)">
-          📥 导出图片
-        </div>
+      <section class="module features">
         <div class="features-header">
           <h2 class="features-title">Key Features</h2>
           <p class="features-subtitle">
@@ -63,10 +55,7 @@
       </section>
 
       <!-- Module 3: Product Showcase -->
-      <section class="module showcase" data-module="Product-Showcase">
-        <div class="download-btn" onclick="downloadModule(this)">
-          📥 导出图片
-        </div>
+      <section class="module showcase">
         <div class="showcase-left">
           <div class="showcase-badge">AlturaGo Collection</div>
           <h2 class="showcase-title">Summer Essentials</h2>
@@ -109,10 +98,7 @@
       </section>
 
       <!-- Module 4: Customer Testimonials -->
-      <section class="module testimonials" data-module="Customer-Testimonials">
-        <div class="download-btn" onclick="downloadModule(this)">
-          📥 导出图片
-        </div>
+      <section class="module testimonials">
         <div class="testimonials-header">
           <h2 class="testimonials-title">What Our Customers Say</h2>
           <p class="testimonials-subtitle">
@@ -172,10 +158,7 @@
       </section>
 
       <!-- Module 5: Call to Action -->
-      <section class="module cta" data-module="Call-To-Action">
-        <div class="download-btn" onclick="downloadModule(this)">
-          📥 导出图片
-        </div>
+      <section class="module cta">
         <div class="cta-content">
           <div class="cta-badge">Limited Time Offer</div>
           <h2 class="cta-title">Get 30% Off</h2>
@@ -231,75 +214,6 @@
       // Initialize page
       document.body.style.opacity = "0";
       document.body.style.transition = "opacity 0.5s ease";
-    </script>
-
-    <!-- 在页面底部添加JavaScript -->
-    <script>
-      // Download module as image function
-      function downloadModule(button) {
-        const module = button.closest(".module");
-        const moduleName = module.getAttribute("data-module") || "Module";
-
-        // Temporarily hide download button
-        const downloadBtn = module.querySelector(".download-btn");
-        downloadBtn.style.display = "none";
-
-        // Use html2canvas for screenshot with improved settings
-        html2canvas(module, {
-          backgroundColor: null, // 保持透明背景或使用原始背景
-          scale: 2, // Higher quality
-          useCORS: true,
-          allowTaint: true,
-          foreignObjectRendering: true, // 改善渲染
-          logging: false, // 关闭日志
-          width: module.offsetWidth,
-          height: module.offsetHeight,
-          scrollX: 0,
-          scrollY: 0,
-          windowWidth: window.innerWidth,
-          windowHeight: window.innerHeight,
-          ignoreElements: function (element) {
-            // 忽略下载按钮
-            return element.classList.contains("download-btn");
-          },
-        })
-          .then((canvas) => {
-            // Create download link
-            const link = document.createElement("a");
-            link.download = `${moduleName}_${new Date().getTime()}.png`;
-            link.href = canvas.toDataURL("image/png", 1.0); // 最高质量
-
-            // Trigger download
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-
-            // Restore button visibility
-            downloadBtn.style.display = "block";
-          })
-          .catch((error) => {
-            console.error("Download failed:", error);
-            alert("导出失败，请重试");
-
-            // Restore button visibility
-            downloadBtn.style.display = "block";
-          });
-      }
-
-      // Add hover effects to download buttons
-      document.addEventListener("DOMContentLoaded", function () {
-        const downloadBtns = document.querySelectorAll(".download-btn");
-
-        downloadBtns.forEach((btn) => {
-          btn.addEventListener("mouseenter", function () {
-            this.style.transform = "scale(1.05)";
-          });
-
-          btn.addEventListener("mouseleave", function () {
-            this.style.transform = "scale(1)";
-          });
-        });
-      });
     </script>
   </body>
 </html>
