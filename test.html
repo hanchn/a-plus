@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+  </body>
+</html>
+<script>
+  const json_ = {
+    id: "1111",
+    key: 'componentA',
+    name: "组件A",
+    key: "componentA",
+    items: [
+      {
+        canCount: true,
+        count: 2,
+        name: "单图属性",
+        key: "singleImg",
+        items: [
+          {
+            name: "图片地址",
+            key: "bigTitle",
+            value: "",
+          },
+          {
+            name: "标题",
+            key: "smTitle",
+            value: "",
+          },
+        ],
+      },
+    ],
+  };
+
+  const demo = document.getElementById("demo");
+  let initValue = {};
+  json_.items.forEach((item) => {
+    initValue[item.key] = item.value;
+  });
+
+  dbValue = [{
+    lang: 'en',
+    s:
+    {
+      id: "1111",
+      name: "组件A",
+      key: "componentA",
+      items: [
+        {
+          canCount: true,
+          count: 2,
+          name: "单图属性",
+          key: "singleImg",
+          items: [
+            {
+              name: "图片地址",
+              key: "imgSrc",
+              value: "",
+            },
+            {
+              name: "标题",
+              key: "title",
+              value: "",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "1112",
+      name: "组件A",
+      key: "componentA",
+      items: [
+        {
+          canCount: true,
+          count: 2,
+          name: "单图属性",
+          key: "singleImg",
+          items: [
+            {
+              name: "图片地址",
+              key: "imgSrc",
+              value: "",
+            },
+            {
+              name: "标题",
+              key: "title",
+              value: "",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "1113",
+      name: "组件A",
+      key: "componentA",
+      items: [
+        {
+          canCount: true,
+          count: 2,
+          name: "单图属性",
+          key: "singleImg",
+          items: [
+            {
+              name: "图片地址",
+              key: "imgSrc",
+              value: "",
+            },
+            {
+              name: "标题",
+              key: "title",
+              value: "",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "1114",
+      name: "组件A",
+      key: "componentA",
+      items: [
+        {
+          canCount: true,
+          count: 2,
+          name: "单图属性",
+          key: "singleImg",
+          items: [
+            {
+              name: "图片地址",
+              key: "imgSrc",
+              value: "",
+            },
+            {
+              name: "标题",
+              key: "title",
+              value: "",
+            },
+          ],
+        },
+      ],
+    },
+
+  }];
+
+
+
+  initDataFun(){
+    initValue = /////
+  }
+  console.log("initValue ", initValue);
+</script>
